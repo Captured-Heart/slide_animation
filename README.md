@@ -1,9 +1,9 @@
 <div align="center">
-   <img src="./assets/carIcon.png" width="200" height="200" color="0xFF2676FC"/>
+   <img src="./assets/carIcon.png" width="250" height="200" color="0xFF2676FC"/>
 
 ## Slide Animations
 
-<strong> A PageView slide animations extracted from a work i did for my clients.</strong>
+<strong> A PageView slide animation extracted from a work I did for my clients.</strong>
 
 <br/>
 [Dribbble link](https://dribbble.com/shots/25288750-Tasks) <br/>
@@ -14,6 +14,10 @@
 
 ## AN INTRO VIDEO OF THE APP
 
+
+
+
+https://github.com/user-attachments/assets/82dad781-cec3-4ace-943d-e3fc5522880d
 
 
 
