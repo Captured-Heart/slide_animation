@@ -26,6 +26,7 @@ https://github.com/user-attachments/assets/82dad781-cec3-4ace-943d-e3fc5522880d
 - on Expanded, you can also pinch(2 fingers on the screen, zoom out kind of gesture) the images in a card to reveal the stack cards<br/>
 - There are Floating action buttons on the expanded card, you can click on it to reveal the stack cards as well<br/>
 - Tap on any of the expanded card to return to the mini-cards<br/>
+- The scroll on the stack cards is a bit buggy(i used a Notification listener to listen to OverscrollNotification), feel free to fix that 😊💜
 </div>
 
 </div>

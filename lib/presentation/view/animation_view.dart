@@ -15,19 +15,21 @@ class AnimationView extends StatelessWidget {
     // _animationNotifier.toString().defaultLog();
     return Scaffold(
       backgroundColor: Colors.teal[100],
-      body: SafeArea(
-        child: ListenableBuilder(
-            listenable: _animationNotifier,
-            builder: (context, _) {
-              var state = _animationNotifier;
-              // var height = state.onTapToOpen ? 0.98 : 0.5;
-              "'state:'  ${state.toString()}".defaultLog();
-              return Stack(
+      body: ListenableBuilder(
+          listenable: _animationNotifier,
+          builder: (context, _) {
+            var state = _animationNotifier;
+            // var height = state.onTapToOpen ? 0.98 : 0.5;
+            "'state:'  ${state.toString()}".defaultLog();
+            return SafeArea(
+              bottom: false,
+              top: !state.onTapToOpen,
+              child: Stack(
                 fit: StackFit.expand,
                 children: [
                   AnimatedPositioned(
                     duration: 700.ms,
-                    bottom: context.deviceHeight(state.onTapToOpen ? 0 : 0.1),
+                    bottom: context.deviceHeight(state.onTapToOpen ? 0 : 0.2),
                     left: 0,
                     right: 0,
                     child: AnimatedContainer(
@@ -85,8 +87,8 @@ class AnimationView extends StatelessWidget {
                         height: context.deviceHeight(0.8),
                         child: StackedCardCarousel(
                           type: StackedCardCarouselType.cardsStack,
-                          initialOffset: 80,
-                          spaceBetweenItems: context.deviceHeight(0.15),
+                          initialOffset: 20,
+                          spaceBetweenItems: context.deviceHeight(0.2),
                           applyTextScaleFactor: false,
                           onPageChanged: (pageIndex) {
                             'this is $pageIndex'.defaultLog();
@@ -177,9 +179,9 @@ class AnimationView extends StatelessWidget {
                       ).padOnly(right: 10),
                     ),
                 ],
-              );
-            }),
-      ),
+              ).padSymmetric(horizontal: 0, vertical: 5),
+            );
+          }),
     );
   }
 }

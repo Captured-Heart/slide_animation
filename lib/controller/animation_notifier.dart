@@ -87,19 +87,7 @@ class AnimationNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-// update scale details
-  void updateScaleDetails(double scaleDetails) {
-    if (onTapToOpen) {
-      'this is the scale details: $scaleDetails'.defaultLog();
-      if (scaleDetails > 1.15 || scaleDetails < 0.9) {
-        showStacked = true;
-        scale = scaleDetails;
-        overScroll = 0.0;
-        pageController.jumpToPage(0);
-        notifyListeners();
-      }
-    }
-  }
+
 
 // listen to scroll notifier
   void listenToScrollNotifier(Object? notification) {
